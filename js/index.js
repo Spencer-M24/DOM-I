@@ -44,4 +44,35 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 let navigation = document.querySelectorAll('nav a');
     navigation.forEach((link, index) => {
     link.textContent = siteContent.nav[`nav-item-${index++}`];
+    link.style.color = 'green';
     });
+
+    let homeNav = document.createElement('a');
+    homeNav.href = '#';
+    homeNav.textContent = 'Home';
+
+
+
+    let ctaImag = documnet.getElementById('cta-img');
+    ctaImage.setAttribute('src', siteContent.cta['img-src']);
+
+    let home = document.querySelector(`h1`);
+    home.textContent = siteContent.cta.h1;
+
+    let button = document.querySelector('button');
+    button.textContent = siteContent.cta.button;
+
+
+    let blog = document.createElement('a');
+    blog.href = `#`;
+    blog.textContent = 'Blog';
+
+    const nav = documnet.querySelector ('nav');
+    nav.preend(homeNav);
+
+    const navBlog = document.querySelector ('nav');
+    navBlog.appendChild(blog);
+
+    let header = document.querySelector ('h4');
+
+    const headerColor
